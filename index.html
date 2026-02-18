@@ -5,103 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qinarun Qur'an by Faiz</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Latar Belakang Bergerak Bintang Jatuh */
-        @keyframes shootingStar {
-            0% { transform: translateX(0) translateY(0) rotate(-45deg); opacity: 1; }
-            100% { transform: translateX(-1000px) translateY(1000px) rotate(-45deg); opacity: 0; }
-        }
-        .star {
-            position: absolute;
-            width: 2px; height: 2px; background: white; border-radius: 50%;
-            box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
-            animation: shootingStar 5s linear infinite; opacity: 0;
-        }
-        /* Gaya Dasar Halaman */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to bottom, #0a0f1c, #131d36); /* Latar belakang gelap kebiruan */
-            margin: 0; padding: 0; color: #e0e0e0;
-            overflow-x: hidden; position: relative;
-        }
-        /* Header Transparan dengan Ikon */
-        header {
-            background: rgba(19, 29, 54, 0.8); backdrop-filter: blur(10px);
-            padding: 30px 20px; text-align: center; position: relative; z-index: 10;
-            border-bottom: 2px solid rgba(46, 204, 113, 0.3);
-        }
-        header i { color: #2ecc71; font-size: 40px; margin-bottom: 10px; }
-        header h1 { margin: 0; font-size: 2.8em; color: white; font-weight: 700; }
-        header p { color: #a0a0a0; font-weight: 300; margin-top: 10px; font-size: 1.1em; }
-        /* Konten Utama */
-        main { padding: 40px 20px; max-width: 1000px; margin: 0 auto; position: relative; z-index: 10; }
-        h2 { text-align: center; color: white; margin-bottom: 35px; font-weight: 600; }
-        /* Grid dan Kartu Surah Gelap Bercahaya */
-        .grid-surah { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .kartu-surah {
-            background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(5px);
-            padding: 30px 25px; border-radius: 20px; text-align: center;
-            border: 2px solid rgba(255, 255, 255, 0.05); cursor: pointer;
-            transition: all 0.4s ease; position: relative; overflow: hidden;
-        }
-        .kartu-surah:hover {
-            border-color: #2ecc71; transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(46, 204, 113, 0.2);
-        }
-        .kartu-surah h3 { color: #2ecc71; margin: 0 0 10px 0; font-size: 1.4em; }
-        .kartu-surah p { color: #a0a0a0; font-size: 0.95em; margin-bottom: 20px; }
-        .kartu-surah h2 { font-family: 'Amiri', serif; color: white; font-size: 2.4em; margin: 0; }
-        /* Kartu Ayat Gelap */
-        .kartu-ayat {
-            background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(5px);
-            padding: 35px; margin-bottom: 25px; border-radius: 20px;
-            border-right: 5px solid #2ecc71;
-        }
-        .teks-arab { font-size: 36px; text-align: right; line-height: 2.2; font-family: 'Amiri', serif; color: white; margin-bottom: 20px; }
-        .teks-indo { font-size: 17px; color: #c0c0c0; text-align: left; line-height: 1.7; padding-top: 20px; border-top: 1px dashed rgba(255, 255, 255, 0.1); }
-        /* Tombol Kembali Modern */
-        #tombol-kembali {
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
-            color: white; border: none; padding: 14px 30px; font-size: 16px; font-weight: 600;
-            border-radius: 50px; cursor: pointer; margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4); transition: 0.3s; display: inline-flex; align-items: center; gap: 10px;
-        }
-        #tombol-kembali:hover { transform: scale(1.05); box-shadow: 0 8px 20px rgba(46, 204, 113, 0.6); }
-        /* Footer Gelap */
-        footer { text-align: center; padding: 35px 20px; color: #707070; font-size: 15px; margin-top: 50px; border-top: 1px solid rgba(255, 255, 255, 0.05); position: relative; z-index: 10; }
-        .tersembunyi { display: none !important; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden; z-index: 0;">
-        <div class="star" style="top: 20%; left: 80%; animation-delay: 0s;"></div>
-        <div class="star" style="top: 50%; left: 30%; animation-delay: 2s;"></div>
-        <div class="star" style="top: 10%; left: 50%; animation-delay: 4s;"></div>
-        <div class="star" style="top: 70%; left: 90%; animation-delay: 1s;"></div>
+    <div class="sky">
+        <div class="star" style="top:10%; left:80%; animation-delay:0s;"></div>
+        <div class="star" style="top:40%; left:20%; animation-delay:2s;"></div>
+        <div class="star" style="top:70%; left:50%; animation-delay:4s;"></div>
     </div>
 
     <header>
-        <i class="fas fa-book-quran"></i>
         <h1>Qinarun Qur'an</h1>
-        <p>Belajar Mengaji Jadi Lebih Mudah dengan Tampilan Modern</p>
-        <div style="margin-top: 15px; font-size: 16px; color: #2ecc71; font-weight: 600; letter-spacing: 1px;">Dibuat oleh: Faiz (Developer Kelas 5 SD)</div>
+        <p>Belajar Mengaji Jadi Lebih Mudah</p>
+        <div class="dev-name">Dibuat oleh: Faiz (Developer Kelas 5 SD)</div>
     </header>
+
+    <nav class="nav-menu">
+        <button onclick="pindahMenu('alquran')" id="btn-alquran" class="active">Al-Qur'an</button>
+        <button onclick="pindahMenu('doa')" id="btn-doa">Doa Harian</button>
+    </nav>
     
     <main>
-        <div id="halaman-daftar">
-            <h2>Daftar Surah</h2>
-            <div id="daftar-surah" class="grid-surah"></div>
-        </div>
-        <div id="halaman-baca" class="tersembunyi">
-            <button id="tombol-kembali" onclick="kembaliKeDaftar()"><i class="fas fa-arrow-left"></i> Kembali ke Daftar</button>
-            <h2 id="judul-baca"></h2>
-            <div id="daftar-ayat"></div>
-        </div>
+        <section id="section-alquran">
+            <div id="halaman-daftar">
+                <h2>Daftar Surah</h2>
+                <div id="daftar-surah" class="grid-container"></div>
+            </div>
+            <div id="halaman-baca" class="tersembunyi">
+                <button class="btn-back" onclick="kembaliKeDaftar()">⬅ Kembali</button>
+                <h2 id="judul-baca"></h2>
+                <div id="daftar-ayat"></div>
+            </div>
+        </section>
+
+        <section id="section-doa" class="tersembunyi">
+            <div id="halaman-daftar-doa">
+                <h2>Doa Harian</h2>
+                <div id="daftar-doa" class="grid-container"></div>
+            </div>
+            <div id="halaman-baca-doa" class="tersembunyi">
+                <button class="btn-back" onclick="kembaliKeDaftarDoa()">⬅ Kembali ke Daftar Doa</button>
+                <h2 id="judul-doa"></h2>
+                <div id="isi-doa" class="kartu-ayat"></div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        &copy; 2026 Qinarun Qur'an | Dikembangkan oleh <b>Faiz</b> dengan Desain Modern
+        &copy; 2026 Qinarun Qur'an | Dikembangkan oleh <b>Faiz</b>
     </footer>
 
     <script src="script.js"></script>
