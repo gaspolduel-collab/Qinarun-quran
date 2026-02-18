@@ -1,0 +1,140 @@
+/* Mengambil Font Mewah dari Google */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Gaya Dasar Aplikasi */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F8F9FA;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header Mewah (Gradasi Hijau Zamrud) */
+header {
+    background: linear-gradient(135deg, #0F4C36 0%, #1A7053 100%);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-bottom: 5px solid #D4AF37; /* Garis Emas */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    color: #E0F2E9;
+    font-weight: 300;
+    margin-top: 5px;
+    font-size: 1.1em;
+}
+
+main {
+    padding: 30px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    color: #0F4C36;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* Grid Daftar Surah */
+.grid-surah {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Kartu Surah Mewah (Melengkung & Bayangan) */
+.kartu-surah {
+    background-color: white;
+    padding: 25px 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.kartu-surah:hover {
+    border-color: #D4AF37; /* Menyala Emas saat disentuh */
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(15, 76, 54, 0.15);
+}
+
+.kartu-surah h3 {
+    color: #0F4C36;
+    margin: 0 0 5px 0;
+    font-size: 1.3em;
+}
+
+.kartu-surah h2 {
+    font-family: 'Amiri', serif;
+    color: #D4AF37; /* Nama Arab Emas */
+    font-size: 2.2em;
+    margin: 10px 0 0 0;
+}
+
+/* Tampilan Baca Ayat */
+.kartu-ayat {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-right: 6px solid #0F4C36;
+}
+
+.teks-arab {
+    font-size: 34px;
+    text-align: right;
+    line-height: 2.2;
+    font-family: 'Amiri', serif;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.teks-indo {
+    font-size: 16px;
+    color: #555;
+    text-align: left;
+    line-height: 1.6;
+    padding-top: 15px;
+    border-top: 1px dashed #DDD;
+}
+
+/* Tombol Kembali Emas */
+#tombol-kembali {
+    background: linear-gradient(135deg, #D4AF37 0%, #B5952F 100%);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+#tombol-kembali:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(212, 175, 55, 0.5);
+}
+
+.tersembunyi {
+    display: none !important;
+}
